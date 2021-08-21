@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: hsl(235, 21%, 11%);
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-height: 350px;
+    z-index: -1;
+}
+
+.background-image img {
+    width: 100%;
+    max-height: 350px;
+    height: 100%;
+    object-fit: cover;
+    min-height: 300px;
+    object-position: left;
+}
+
+.container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0px 30px;
+    margin-top: 100px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    color: white;
+    letter-spacing: 10px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.new-todo {
+    width: 100%;
+    height: 70px;
+    background-color: hsl(235, 24%, 19%);
+    margin-top: 50px;
+    border-radius: 6px;
+    display: flex;
+}
+
+
+
+.check{
+    flex-basis: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.check-mark {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid hsl(237, 14%, 26%);
+}
+
+.new-todo-input {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.new-todo-input input {
+    width: 100%;
+    padding: 10px 0px;
+    font-size: 18px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: hsl(234, 39%, 85%);
+}
+.new-todo-input input::placeholder {
+    color: hsl(233, 14%, 35%);
+}
+
+.todo-text {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: hsl(234, 39%, 85%);
+}
+
+.todo-item {
+    width: 100%;
+    height: 70px;
+    background-color: hsl(235, 24%, 19%);
+    display: flex;
+    border-bottom: 1px solid hsl(237, 14%, 26%);
+    cursor: pointer;
+}
+
+.todo-items-container {
+    margin-top: 30px;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: hsl(235, 24%, 19%);
+}
+
+.todo-items-info {
+    width: 100%;
+    height: 70px;
+    background-color: hsl(235, 24%, 19%);
+    display: flex;
+    align-items: center;
+    color: hsl(233, 14%, 35%);
+    padding-left: 30px;
+}
