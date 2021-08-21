@@ -97,6 +97,7 @@ body {
 
 .todo-text.checked {
     text-decoration: line-through;
+    color: hsl(233, 14%, 35%);
 }
 
 .new-todo-input {
