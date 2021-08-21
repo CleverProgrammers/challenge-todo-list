@@ -23,10 +23,8 @@ body {
 
 .background-image img {
     width: 100%;
-    max-height: 350px;
-    height: 100%;
     object-fit: cover;
-    min-height: 300px;
+    min-height: 350px;
     object-position: left;
 }
 
@@ -73,6 +71,32 @@ body {
     height: 30px;
     border-radius: 50%;
     border: 2px solid hsl(237, 14%, 26%);
+    transition: all 0.25s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.check-mark img {
+    visibility: hidden;
+}
+
+.check-mark.checked img, .check-mark:hover img {
+    visibility: visible;
+}
+
+.check-mark:hover {
+    border-color: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
+    background: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);   
+}
+
+.check-mark.checked {
+    background-color: pink;
+    background: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);   
+}
+
+.todo-text.checked {
+    text-decoration: line-through;
 }
 
 .new-todo-input {
@@ -90,6 +114,12 @@ body {
     outline: none;
     color: hsl(234, 39%, 85%);
 }
+
+.new-todo-input form {
+    flex-grow: 1;
+    display: flex;
+}
+
 .new-todo-input input::placeholder {
     color: hsl(233, 14%, 35%);
 }
@@ -108,13 +138,17 @@ body {
     display: flex;
     border-bottom: 1px solid hsl(237, 14%, 26%);
     cursor: pointer;
+    transition: all .25s ease;
+    transition-property: box-shadow, transform, border-color;
 }
 
-.todo-items-container {
+.todo-items-wrapper {
     margin-top: 30px;
     border-radius: 6px;
     overflow: hidden;
     background-color: hsl(235, 24%, 19%);
+    box-shadow: 0px 2px 30px 0px rgba(0,0,0,0.4);
+    margin-bottom: 30px;
 }
 
 .todo-items-info {
@@ -125,4 +159,44 @@ body {
     align-items: center;
     color: hsl(233, 14%, 35%);
     padding-left: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 30px;
 }
+
+.items-statuses {
+    display: flex;
+    justify-content: center;
+}
+
+.items-statuses span  {
+    padding: 0 4px;
+    cursor: pointer;
+}
+
+.items-clear {
+    cursor: pointer;
+    text-align: end;
+}
+
+.items-statuses span:hover, .items-clear:hover {
+    color: hsl(220, 98%, 61%);
+}
+
+.items-statuses .active  {
+    color: hsl(220, 98%, 61%);
+}
+
+.todo-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0px 7px 0px hsl(235, 21%, 11%);
+    border-color: hsl(235, 24%, 19%);
+}
+
+
+
+
+
+
+
+
